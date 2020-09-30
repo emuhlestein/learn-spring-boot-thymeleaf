@@ -1,10 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Welcome</title>
 </head>
 <body>
-Welcome ${name}
+<!--<h1 th:object="${user}" th:text="'Welcome ' + ${username}">HELP ME!!!!!!!!</h1>-->
+<h1 th:text="'Welcome ' + ${username}">HELP ME!!!!!!!!</h1>
+<p th:text="Hello World!"></p>
+<ul>
+    <th:block th:each="name : ${names}">
+        <li th:text="${name}"></li>
+    </th:block>
+</ul>
 </body>
 </html>
