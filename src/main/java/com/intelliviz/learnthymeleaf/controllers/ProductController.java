@@ -8,6 +8,7 @@ public class ProductController {
 
     @GetMapping("/product")
     public String getProduct() {
+        System.out.println("In Product controller");
         return "product";
     }
 
